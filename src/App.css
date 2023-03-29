@@ -2,9 +2,9 @@
   text-align: center;
 }
 
-body {
+/*body {
   background-image: linear-gradient(to bottom, #0003, rgba(28, 77, 100, 0.459));
-}
+}*/
 
 /*Alerts */
 .alert {
@@ -25,78 +25,240 @@ body {
   color: #fff;
 }
 
+/*NavBar*/
+.header {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: rgb(29, 57, 85);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin: -10px -10px;
+}
+
 .navbar {
-  height: 48px;
-  padding: 1rem 0rem;
-  opacity: 0.9;
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #123;
-  background-image: linear-gradient(to bottom, #0003, transparent);
-}
-
-.navbar ul {
-  padding: 0;
   display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  margin: 0rem 10rem;
-  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 0px;
 }
-
-/*.navbar li a {
-  font-family: cursive;
-  color: white;
-  font-size: 16px;
-  text-decoration: none;
-}*/
-
-.logo {
-  font-size: 30px;
-  margin-top: 0;
-}
-
-/*.navbar a:hover {
-  background: #ffffff06;
-  color: #adf;
-  box-shadow: 0 10px #fa0404;
-}*/
 
 .navbar a {
-  opacity: 0.6;
-  transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -webkit-transition: opacity 1s ease-in-out;
-}
-.navbar a:hover {
-  opacity: 1;
-  transition: opacity 0.55s ease-in-out;
-  -moz-transition: opacity 0.55s ease-in-out;
-  -webkit-transition: opacity 0.55s ease-in-out;
-}
-​ a:link {
   text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.navbar a:hover {
+  color: lightblue;
+}
+
+.item {
+  font-size: 150%;
 }
 
 /*Landing*/
-.landing {
-  position: relative;
-  height: 100vh;
-}
 
-.landing-inner {
-  color: #000000;
-  height: 100%;
+.inner {
   width: 80%;
   margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin-top: 50px;
+}
+
+.container {
+  display: grid;
+  grid-template: repeat(1, 100%) / repeat(4, 25%);
+  height: 200px;
+  border: 3px solid black;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  background: gold;
+}
+
+.login-title {
+  width: 100%;
+  margin: 0px 0px 15px 0px;
+  padding: 0.3rem 0rem 0.3rem 1rem;
+  border: 1px solid black;
+}
+
+.form-login {
   text-align: center;
+}
+
+.form-group {
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  background: rgb(70, 96, 105);
+  color: white;
+  border: 0;
+  padding: 0.5rem 0.7rem;
+  width: 70%;
+  border-radius: 5px;
+}
+
+.forgot {
+  color: rgb(70, 96, 105);
+  text-align: center;
+}
+
+.form-login input {
+  width: 70%;
+}
+
+img {
+  width: 224%;
+  height: 100%;
+}
+
+.box-one {
+  grid-column: span 2;
+  width: 15rem;
+}
+
+.btn2 {
+  width: 100%;
+  height: 105%;
+  background: rgb(70, 96, 105);
+  color: white;
+}
+
+.btn2:hover,
+.btn:hover {
+  background: rgb(29, 57, 85);
+  cursor: pointer;
+}
+
+.grid-1x3 {
+  display: grid;
+  grid-template: repeat(3, 33%) / repeat(1, 100%);
+  height: 100%;
+}
+
+/*Landing 2*/
+
+.grid-2x1 {
+  display: grid;
+  grid-template: repeat(2, 50%) / repeat(4, 25%);
+  height: 300px;
+  grid-template-areas: "a b b b" "c b b b";
+  border: 3px solid black;
+}
+
+.a {
+  grid-area: a;
+}
+
+.b {
+  grid-area: b;
+}
+
+.c {
+  grid-area: c;
+}
+
+.grid-4x1 {
+  display: grid;
+  grid-template: repeat(4, 25%) / repeat(1, 100%);
+  border: 3px solid black;
+}
+
+.grid-title {
+  width: auto;
+  height: auto;
+  text-align: left;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border: 1px solid black;
+}
+
+.grid-ranking {
+  border: 3px solid black;
+  display: grid;
+  grid-template: repeat(6) / repeat(5);
+  grid-template-areas: "a a a a a" "r1 p1 p1 p1 p1" "r2 p2 p2 p2 p2" "r3 p3 p3 p3 p3" "r4 p4 p4 p4 p4" "r5 p5 p5 p5 p5";
+}
+
+.r1 {
+  grid-area: r1;
+}
+
+.r2 {
+  grid-area: r2;
+}
+
+.r3 {
+  grid-area: r3;
+}
+
+.r4 {
+  grid-area: r4;
+}
+
+.r5 {
+  grid-area: r5;
+}
+.r1,
+.r2,
+.r3,
+.r4,
+.r5 {
+  border: 1px solid black;
+}
+
+.p1 {
+  grid-area: p1;
+}
+
+.p2 {
+  grid-area: p2;
+}
+
+.p3 {
+  grid-area: p3;
+}
+
+.p4 {
+  grid-area: p4;
+}
+
+.p5 {
+  grid-area: p5;
+}
+
+.p1,
+.p2,
+.p3,
+.p4,
+.p5 {
+  border: 1px solid black;
+}
+
+.b h1 {
+  margin: 0 0 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.register-form {
+  margin: 10px 10px 0 30px;
+}
+
+.register-form p {
+  font-size: 10px;
+}
+
+.register-form input,
+.register-form button {
+  margin: 0.3rem;
 }
 
 /*other*/
@@ -107,7 +269,6 @@ ul {
   padding: 0;
 }
 
-li Link {
-  display: block;
-  width: 60px;
+a {
+  text-decoration: none;
 }

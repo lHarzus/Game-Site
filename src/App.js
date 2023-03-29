@@ -18,7 +18,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Landing />} />
         </Routes>
-        <section className="container">
+        <section>
           <Alert />
           <Routes>
             <Route path="/login" element={<Login />} />
