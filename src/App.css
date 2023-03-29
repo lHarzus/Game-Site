@@ -2,37 +2,112 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-image: linear-gradient(to bottom, #0003, rgba(28, 77, 100, 0.459));
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*Alerts */
+.alert {
+  padding: 0.8rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+  background: var(--light-color);
+  color: #333;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.alert-danger {
+  background: red;
+  color: #fff;
+}
+
+.alert-success {
+  background: green;
+  color: #fff;
+}
+
+.navbar {
+  height: 48px;
+  padding: 1rem 0rem;
+  opacity: 0.9;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #123;
+  background-image: linear-gradient(to bottom, #0003, transparent);
+}
+
+.navbar ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0rem 10rem;
+  align-items: center;
+}
+
+/*.navbar li a {
+  font-family: cursive;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}*/
+
+.logo {
+  font-size: 30px;
+  margin-top: 0;
+}
+
+/*.navbar a:hover {
+  background: #ffffff06;
+  color: #adf;
+  box-shadow: 0 10px #fa0404;
+}*/
+
+.navbar a {
+  opacity: 0.6;
+  transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+}
+.navbar a:hover {
+  opacity: 1;
+  transition: opacity 0.55s ease-in-out;
+  -moz-transition: opacity 0.55s ease-in-out;
+  -webkit-transition: opacity 0.55s ease-in-out;
+}
+​ a:link {
+  text-decoration: none;
+}
+
+/*Landing*/
+.landing {
+  position: relative;
+  height: 100vh;
+}
+
+.landing-inner {
+  color: #000000;
+  height: 100%;
+  width: 80%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+/*other*/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li Link {
+  display: block;
+  width: 60px;
 }
