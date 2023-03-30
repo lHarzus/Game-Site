@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useEffect } from "react";
 import Alert from "./components/layout/Alert";
 import Landing from "./components/layout/Landing";
-import Login from "./components/auth/Login";
 import Navbar from "./components/layout/Navbar";
 
 //Redux imports
@@ -20,9 +19,6 @@ const App = () => {
         </Routes>
         <section>
           <Alert />
-          <Routes>
-            <Route path="/login" element={<Login />} />
-          </Routes>
         </section>
       </Router>
     </Provider>

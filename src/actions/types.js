@@ -3,3 +3,7 @@ export const REMOVE_ALERT = "REMOVE_ALERT";
 export const GET_STATUS = "GET_STATUS";
 export const STATUS_ERROR = "STATUS_ERROR";
 export const GET_TOP5 = "GET_TOP5";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGOUT = "LOGOUT";
+export const CHANGE_OPTION = "CHANGE_OPTION";

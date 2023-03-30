@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import logo from "../../images/logo2.png";
 
 const NavBar = props => {
   return (
@@ -16,7 +17,7 @@ const NavBar = props => {
         </li>
         <li className="item">
           <Link className="hover2" to="">
-            Sirius
+            <img className="logo" src={logo}></img>
           </Link>
         </li>
         <li>

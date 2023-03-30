@@ -8,29 +8,26 @@ import ButtonsGrid from "./ButtonsGrid";
 import Register from "./Register";
 import Status from "./Status";
 import Ranking from "./Ranking";
+import UserPanelBtn from "./UserPanelBtn";
+import UserPanel from "./UserPanel";
+import Images from "./Images";
 
-const Landing = ({ setAlert }) => {
+const Landing = ({ setAlert, auth: { isAuthenticated, user } }) => {
   return (
     <section>
       <div className="inner">
         <div className="container">
-          <Login />
-          <div className="box-one">
-            <img
-              src="https://www.quizexpo.com/wp-content/uploads/2022/03/cover-6-850x491.jpg"
-              alt="image"></img>
-          </div>
-          <div>
-            <ButtonsGrid />
-          </div>
+          {isAuthenticated ? <UserPanelBtn /> : <Login />}
+          <Images />
+          <ButtonsGrid />
         </div>
 
-        <div className="grid-2x1">
+        <div className="grid-2x4">
           <div className="a grid-4x1">
             <Status />
           </div>
           <div className="b">
-            <Register />
+            {isAuthenticated ? <UserPanel /> : <Register />}
           </div>
           <div className="c grid-ranking">
             <Ranking />
@@ -43,6 +40,11 @@ const Landing = ({ setAlert }) => {
 
 Landing.propTypes = {
   setAlert: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
 };
 
-export default connect(null, { setAlert })(Landing);
+const mapStateToProps = state => ({
+  auth: state.auth,
+});
+
+export default connect(mapStateToProps, { setAlert })(Landing);

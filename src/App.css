@@ -2,9 +2,12 @@
   text-align: center;
 }
 
-/*body {
-  background-image: linear-gradient(to bottom, #0003, rgba(28, 77, 100, 0.459));
-}*/
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url("/src/images/wpp.jpg");
+  background-size: cover;
+}
 
 /*Alerts */
 .alert {
@@ -29,13 +32,7 @@
 .header {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  background-color: rgb(29, 57, 85);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
-  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
+  background-image: linear-gradient(to bottom, rgb(37, 56, 76), transparent);
   border-radius: 5px;
   margin: -10px -10px;
 }
@@ -43,27 +40,34 @@
 .navbar {
   display: flex;
   justify-content: space-around;
-  padding: 2rem 0px;
+  padding: 2rem 5rem;
 }
 
 .navbar a {
   text-decoration: none;
-  color: white;
+  color: rgb(70, 223, 255);
   text-align: center;
+  font-size: 100%;
 }
 
-.navbar a:hover {
-  color: lightblue;
+.navbar a:hover,
+.logo:hover {
+  filter: brightness(120%);
 }
 
 .item {
   font-size: 150%;
+  text-align: center;
 }
 
+.logo {
+  height: 70%;
+  width: 40%;
+}
 /*Landing*/
 
 .inner {
-  width: 80%;
+  width: 70%;
   margin: auto;
   margin-top: 50px;
 }
@@ -72,7 +76,6 @@
   display: grid;
   grid-template: repeat(1, 100%) / repeat(4, 25%);
   height: 200px;
-  border: 3px solid black;
 }
 
 .box {
@@ -81,11 +84,19 @@
   background: gold;
 }
 
+/*Login*/
+
+.input {
+  background: url("/src/images/download.png") no-repeat scroll 0 0 transparent;
+  background-size: cover;
+  color: rgb(175, 205, 255);
+}
+
 .login-title {
   width: 100%;
   margin: 0px 0px 15px 0px;
   padding: 0.3rem 0rem 0.3rem 1rem;
-  border: 1px solid black;
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 .form-login {
@@ -93,12 +104,13 @@
 }
 
 .form-group {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .btn {
-  background: rgb(70, 96, 105);
-  color: white;
+  background: url("/src/images/btn.png") no-repeat scroll 0 0 transparent;
+  background-size: cover;
+  color: rgb(175, 205, 255);
   border: 0;
   padding: 0.5rem 0.7rem;
   width: 70%;
@@ -106,34 +118,64 @@
 }
 
 .forgot {
-  color: rgb(70, 96, 105);
   text-align: center;
+}
+
+.forgot a {
+  color: rgb(255, 255, 255);
+  font-size: 80%;
 }
 
 .form-login input {
   width: 70%;
+  line-height: 1.2rem;
+}
+
+.form-login input::placeholder {
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
 }
 
 img {
-  width: 224%;
+  width: 100%;
   height: 100%;
+  object-fit: fill;
 }
 
 .box-one {
   grid-column: span 2;
-  width: 15rem;
 }
 
 .btn2 {
   width: 100%;
   height: 105%;
-  background: rgb(70, 96, 105);
-  color: white;
+  text-transform: uppercase;
+  font-size: 19px;
+  background: rgb(41, 46, 54);
+  border: 0;
+}
+
+.btn-download {
+  background: url("/src/images/download.png") no-repeat scroll 0 0 transparent;
+  background-size: cover;
+  color: rgb(175, 205, 255);
+}
+
+.btn-discord {
+  background: url("/src/images/discord.png") no-repeat scroll 0 0 transparent;
+  background-size: cover;
+  color: rgb(148, 197, 242);
+}
+
+.btn-ranking {
+  background: url("/src/images/ranking.png") no-repeat scroll 0 0 transparent;
+  background-size: cover;
+  color: rgb(245, 190, 133);
 }
 
 .btn2:hover,
 .btn:hover {
-  background: rgb(29, 57, 85);
+  filter: brightness(120%);
   cursor: pointer;
 }
 
@@ -145,16 +187,18 @@ img {
 
 /*Landing 2*/
 
-.grid-2x1 {
+.grid-2x4 {
   display: grid;
   grid-template: repeat(2, 50%) / repeat(4, 25%);
   height: 300px;
   grid-template-areas: "a b b b" "c b b b";
-  border: 3px solid black;
 }
 
 .a {
   grid-area: a;
+  background: url("/src/images/btn.png") no-repeat scroll 0 0 transparent;
+  background-size: cover;
+  color: rgb(175, 205, 255);
 }
 
 .b {
@@ -168,19 +212,22 @@ img {
 .grid-4x1 {
   display: grid;
   grid-template: repeat(4, 25%) / repeat(1, 100%);
-  border: 3px solid black;
 }
 
 .grid-title {
+  background: url("/src/images/status2.png") no-repeat scroll 0 0 transparent;
+  background-size: cover;
+  color: rgb(218, 215, 184);
   width: auto;
   height: auto;
   text-align: left;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-  border: 1px solid black;
 }
 
 .grid-ranking {
-  border: 3px solid black;
+  background: url("/src/images/download.png") no-repeat scroll 0 0 transparent;
+  background-size: cover;
+  color: rgb(175, 205, 255);
   display: grid;
   grid-template: repeat(6) / repeat(5);
   grid-template-areas: "a a a a a" "r1 p1 p1 p1 p1" "r2 p2 p2 p2 p2" "r3 p3 p3 p3 p3" "r4 p4 p4 p4 p4" "r5 p5 p5 p5 p5";
@@ -210,7 +257,9 @@ img {
 .r3,
 .r4,
 .r5 {
-  border: 1px solid black;
+  background: url("/src/images/btn.png") no-repeat scroll 0 0 transparent;
+  background-size: cover;
+  color: rgb(175, 205, 255);
 }
 
 .p1 {
@@ -238,18 +287,18 @@ img {
 .p3,
 .p4,
 .p5 {
-  border: 1px solid black;
+  border-bottom: 1px solid rgb(242, 249, 250, 0.5);
 }
 
 .b h1 {
-  margin: 0 0 1rem 0;
+  margin: 0;
   padding: 0.5rem;
-  border: 1px solid black;
+  border-bottom: 1px solid rgb(0, 0, 0);
   text-align: center;
 }
-
+/*Register*/
 .register-form {
-  margin: 10px 10px 0 30px;
+  margin: 0px 10px 0 30px;
 }
 
 .register-form p {
@@ -259,6 +308,19 @@ img {
 .register-form input,
 .register-form button {
   margin: 0.3rem;
+}
+
+.register-title {
+  background: url("/src/images/discord.png") no-repeat scroll 0 0 transparent;
+  background-size: cover;
+  color: rgb(175, 205, 255);
+}
+
+.register-body {
+  background: url("/src/images/discord.png") no-repeat scroll 0 0 transparent;
+  background-size: cover;
+  color: rgb(175, 205, 255);
+  height: 110%;
 }
 
 /*other*/
@@ -272,3 +334,57 @@ ul {
 a {
   text-decoration: none;
 }
+
+/*Userpanel*/
+
+.userpanel {
+  padding: 2rem 2rem;
+  height: 100%;
+}
+
+.vote {
+  padding: 1rem 2rem;
+  height: 100px;
+}
+
+.grid-2x1 {
+  display: grid;
+  grid-template: repeat(2, 50%) / repeat(1, 100%);
+  background: url("/src/images/btn.png") no-repeat scroll 0 0 transparent;
+  background-size: cover;
+  color: rgb(175, 205, 255);
+}
+
+/*Images*/
+
+.wrapper {
+  position: relative; /* Establish a containing block for the absolute element */
+  display: inline-block; /* To make width fit to the content */
+}
+
+.wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.wrapper i {
+  font-size: 25px;
+  color: white;
+}
+
+.arrow-right {
+  position: absolute; /* Remove the element from normal flow */
+  right: 0; /* Position the element at top-right corner of the wrapper */
+  bottom: 42%;
+  cursor: pointer;
+}
+
+.arrow-left {
+  position: absolute; /* Remove the element from normal flow */
+  left: 0; /* Position the element at top-right corner of the wrapper */
+  bottom: 42%;
+  cursor: pointer;
+}
+
+/**/

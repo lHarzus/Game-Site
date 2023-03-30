@@ -7,7 +7,6 @@ const Ranking = ({ getTop5, status: { top5 } }) => {
   useEffect(() => {
     getTop5();
   }, []);
-  console.log("wofewef", top5);
   return top5.length === 0 ? (
     <Fragment>Loading</Fragment>
   ) : (

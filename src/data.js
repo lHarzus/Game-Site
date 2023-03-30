@@ -48,10 +48,37 @@ const ranking = [
   },
 ];
 
+const contas = [
+  {
+    username: "ruben",
+    password: "123456",
+    email: "ruben@hotmail.com",
+  },
+  {
+    username: "rubnitos",
+    password: "123456",
+    email: "rubnitos@hotmail.com",
+  },
+];
+
 export const getStatusData = () => {
   return status;
 };
 
 export const getTop5Data = () => {
   return ranking.slice(0, 5);
+};
+
+export const loginData = (name, pw) => {
+  let res = false;
+  contas.forEach(conta => {
+    if (conta.username === name && conta.password === pw) {
+      res = true;
+    }
+  });
+  return res;
+};
+
+export const registerData = (username, password, email) => {
+  contas.push({ email, username, password });
 };

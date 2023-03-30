@@ -27,7 +27,7 @@ export const getTop5 = () => dispatch => {
   } catch (err) {
     dispatch({
       type: STATUS_ERROR,
-      payload: { msg: err.response.statusText, status: err.response.status },
+      payload: { msg: err, status: err },
     });
   }
 };
